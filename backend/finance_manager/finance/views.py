@@ -8,3 +8,6 @@ class IncomeViewSet(viewsets.ModelViewSet):
     queryset = Income.objects.all()
     serializer_class = IncomeSerializer
 
+class ExpenseViewSet(viewsets.ModelViewSet):
+    queryset = Expense.objects.all()
+    serializer_class = ExpenseSerializer
