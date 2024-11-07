@@ -9,7 +9,7 @@ class Income(models.Model):
         return f"{self.source}: {self.amount}"
 
 
-class Amount(models.Model):
+class Expense(models.Model):
     amount = models.DecimalField(max_digits=10, decimal_places=2),
     category = models.CharField(max_length=255),
     date = models.DateField()
