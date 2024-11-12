@@ -1,13 +1,13 @@
 import api from "./axios";
 
-interface IIncome {
+export interface IIncome {
   id: number;
   amount: string;
   source: string;
   date: string;
 }
 
-interface IExpenses {
+export interface IExpenses {
   id: number;
   amount: string;
   category: string;
@@ -20,7 +20,7 @@ export const fetchData = async (): Promise<{
 }> => {
   try {
     const [incomeRes, expenseRes] = await Promise.all([
-      api.get("/income/"),
+      api.get("/incomes/"),
       api.get("/expenses/"),
     ]);
 
