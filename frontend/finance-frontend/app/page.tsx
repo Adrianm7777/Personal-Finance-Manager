@@ -1,6 +1,7 @@
 "use server";
 import React from "react";
 import { fetchData, IIncome, IExpenses } from "@/lib/fetchData";
+import Form from "@/components/form";
 
 const Page = async () => {
   let data: { incomes: IIncome[]; expenses: IExpenses[] };
@@ -12,9 +13,13 @@ const Page = async () => {
   }
 
   const { incomes, expenses } = data;
+
   return (
     <div>
       <h2 className="text-xl font-bold mb-4">Dashboard</h2>
+
+      <Form incomes={incomes} expenses={expenses} />
+
       <section className="mb-8">
         <h3 className="text-lg font-semibold">Incomes</h3>
         <ul className="list-disc list-inside">
