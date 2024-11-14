@@ -8,7 +8,7 @@ interface FormProps {
   expenses: IExpenses[];
 }
 
-const Form: React.FC<FormProps> = ({ incomes, expenses }) => {
+const Form = ({ incomes, expenses }: FormProps) => {
   const [incomeForm, setIncomeForm] = useState({
     amount: "",
     source: "",
