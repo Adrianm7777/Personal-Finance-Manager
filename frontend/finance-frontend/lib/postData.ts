@@ -5,14 +5,14 @@ export const postIncome = async (
   income: Omit<IIncome, "id">
 ): Promise<IIncome> => {
   const response = await api.post("/incomes/", income);
-
+  console.log("API Data:", response);
   return response.data;
 };
 
 export const postExpenses = async (
   expenses: Omit<IExpenses, "id">
 ): Promise<IExpenses> => {
-  const response = await api.post("/expenses", expenses);
+  const response = await api.post("/expenses/", expenses);
 
   return response.data;
 };
