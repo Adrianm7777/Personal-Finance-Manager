@@ -39,17 +39,20 @@ const Page = async () => {
           </ul>
         </section>
 
-        <section className="mt-8">
-          <h3 className="text-2xl font-semibold text-center mb-4">Expenses</h3>
-          <ul className="list-disc list-inside bg-gray-50 rounded-md p-4">
+        <section>
+          <h3 className="text-lg font-semibold text-center">Expenses</h3>
+          <ul className="list-disc list-inside">
             {expenses.map((expense) => (
-              <li key={expense.id} className="mb-2">
-                <span className="font-medium">{expense.category}:</span> $
-                {expense.amount}
-                <span className="text-sm text-gray-600">
-                  {" "}
-                  on {expense.date}
-                </span>
+              <li key={expense.id}>
+                <p>
+                  <strong>Category:</strong> {expense.category}
+                </p>
+                <p>
+                  <strong>Amount:</strong> ${expense.amount}
+                </p>
+                <p>
+                  <strong>Date:</strong> {expense.date}
+                </p>
               </li>
             ))}
           </ul>

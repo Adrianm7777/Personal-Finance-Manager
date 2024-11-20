@@ -12,7 +12,7 @@ export const postIncome = async (
 export const postExpenses = async (
   expenses: Omit<IExpenses, "id">
 ): Promise<IExpenses> => {
-  const response = await api.post("/expenses", expenses);
+  const response = await api.post("/expenses/", expenses);
 
   return response.data;
 };
